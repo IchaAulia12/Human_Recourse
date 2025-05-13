@@ -44,15 +44,19 @@ Business dashboard dibuat menggunakan Looker Studio, dengan fokus utama pada ana
 - Grafik attrition berdasarkan OverTime, yang menunjukkan dampak beban kerja terhadap keputusan resign.
 
 - Dashboard ini menjadi alat bantu utama bagi tim HR untuk mengidentifikasi area yang memerlukan perhatian khusus dan mengambil tindakan preventif lebih cepat.
+  
+![Screenshot 2025-05-13 085418](https://github.com/user-attachments/assets/83ce2a58-35fa-4c2a-aa43-701c0b2b7fec)
 
 Link Business Dashboard : https://lookerstudio.google.com/reporting/6c5a2346-bbd8-41fd-97e1-827e9939a4e9
 ## Model Prediction
 
+- Dalam Prediksi ini. HR hanya perlu memasukkan ID dari pekerja, kemudian disini akan memperlihatkan presentase prediksi apakah memiliki kemungkinan keluar tinggi atau tidak.
 ![Screenshot 2025-05-13 081946](https://github.com/user-attachments/assets/0451977e-2fd7-43a2-8168-c596ca211ef6)
 
-
+- ini adalah contoh jika prediksi mendapati bahwa Employee dengan ID 12 memiliki kemungkinan keluar yang tinggi.
 ![Screenshot 2025-05-13 082042](https://github.com/user-attachments/assets/20e899d7-585e-43a0-b18b-70db4d85765f)
 
+- Pada Halaman ini juga terdapat Dashboard untuk HR mempertimbangkan prediksi dan juga Employee bagaimana untuk mempertahankan dan menciptakan ruang kerja yang lebih baik.
 ![Screenshot 2025-05-13 082131](https://github.com/user-attachments/assets/b2a19572-b9cc-423c-ae3b-162b79675285)
 ![Screenshot 2025-05-13 082138](https://github.com/user-attachments/assets/083a679a-edd3-41f6-a027-0b1d157fda16)
 ![Screenshot 2025-05-13 082148](https://github.com/user-attachments/assets/02e92c06-abfb-403c-a64e-f1201fe2acdb)
