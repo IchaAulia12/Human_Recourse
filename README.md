@@ -47,7 +47,7 @@ Business dashboard dibuat menggunakan Looker Studio, dengan fokus utama pada ana
   
 ![Screenshot 2025-05-13 085418](https://github.com/user-attachments/assets/83ce2a58-35fa-4c2a-aa43-701c0b2b7fec)
 
-Link Business Dashboard : https://lookerstudio.google.com/reporting/6c5a2346-bbd8-41fd-97e1-827e9939a4e9
+[Link Business Dashboard](https://lookerstudio.google.com/reporting/6c5a2346-bbd8-41fd-97e1-827e9939a4e9)
 ## Model Prediction
 
 - Dalam Prediksi ini. HR hanya perlu memasukkan ID dari pekerja, kemudian disini akan memperlihatkan presentase prediksi apakah memiliki kemungkinan keluar tinggi atau tidak.
@@ -62,7 +62,7 @@ Link Business Dashboard : https://lookerstudio.google.com/reporting/6c5a2346-bbd
 ![Screenshot 2025-05-13 082148](https://github.com/user-attachments/assets/02e92c06-abfb-403c-a64e-f1201fe2acdb)
 
 
-Link Streamlit : https://humanrecourse-2cglzs2f3lvwggixfsusrn.streamlit.app/
+[Link Streamlit](https://humanrecourse-2cglzs2f3lvwggixfsusrn.streamlit.app/)
 
 ## Conclusion
 Hasil analisis menunjukkan bahwa attrition di perusahaan Jaya Jaya Maju sangat dipengaruhi oleh faktor internal seperti kepuasan kerja, beban kerja berlebih, dan keseimbangan hidup yang buruk. Selain itu, ditemukan bahwa departemen Sales dan R&D menjadi kontributor terbesar terhadap angka attrition. Faktor sosial juga turut memengaruhi, terlihat dari proporsi tinggi karyawan lajang yang keluar.
