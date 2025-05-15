@@ -24,7 +24,7 @@ Analisis eksploratif terhadap data HR untuk mengidentifikasi pola dan faktor pen
 
 Persiapan
 
-Sumber data: Dataset internal perusahaan dengan lebih dari 1000 karyawan, berisi 35 fitur terkait karakteristik karyawan, kepuasan kerja, kompensasi, dan histori pekerjaan.
+[Sumber data](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee): Dataset internal perusahaan dengan lebih dari 1000 karyawan, berisi 35 fitur terkait karakteristik karyawan, kepuasan kerja, kompensasi, dan histori pekerjaan.
 
 Setup environment:
 
@@ -34,6 +34,27 @@ Tools yang digunakan:
 - Looker Studio (untuk visualisasi dashboard)
 - Jupyter Notebook (untuk eksplorasi dan modelling)
 ```
+## Setup Environment - Anaconda
+```
+conda create --name main-ds python=3.9
+conda activate main-ds
+pip install -r requirements.txt
+```
+
+## Setup Environment - Shell/Terminal
+```
+mkdir proyek_analisis_data
+cd proyek_analisis_data
+pipenv install
+pipenv shell
+pip install -r requirements.txt
+```
+
+## Run steamlit app
+```
+streamlit run app.py
+```
+
 ## Business Dashboard
 Business dashboard dibuat menggunakan Looker Studio, dengan fokus utama pada analisis visual terhadap faktor-faktor penyebab attrition. Beberapa visualisasi yang ditampilkan antara lain:
 
