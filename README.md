@@ -34,18 +34,21 @@ Tools yang digunakan:
 - Looker Studio (untuk visualisasi dashboard)
 - Jupyter Notebook (untuk eksplorasi dan modelling)
 ```
+## Setup menggunakan Google colab 
+```
+!pip install -r requirements.txt
+```
 ## Setup Environment - Anaconda
 ```
 conda create --name main-ds python=3.9
 conda activate main-ds
 pip install -r requirements.txt
 ```
-
-## Setup Environment - Shell/Terminal
+## Setup dengan pipenv (alternatif)
 ```
 mkdir proyek_analisis_data
 cd proyek_analisis_data
-pipenv install
+pipenv install --python 3.9
 pipenv shell
 pip install -r requirements.txt
 ```
@@ -86,17 +89,64 @@ Business dashboard dibuat menggunakan Looker Studio, dengan fokus utama pada ana
 [Link Streamlit](https://humanrecourse-2cglzs2f3lvwggixfsusrn.streamlit.app/)
 
 ## Conclusion
-Hasil analisis menunjukkan bahwa attrition di perusahaan Jaya Jaya Maju sangat dipengaruhi oleh faktor internal seperti kepuasan kerja, beban kerja berlebih, dan keseimbangan hidup yang buruk. Selain itu, ditemukan bahwa departemen Sales dan R&D menjadi kontributor terbesar terhadap angka attrition. Faktor sosial juga turut memengaruhi, terlihat dari proporsi tinggi karyawan lajang yang keluar.
+Hasil analisis menunjukkan bahwa attrition di perusahaan Jaya Jaya Maju dipengaruhi oleh kombinasi faktor internal dan sosial. Beberapa faktor utama yang berkontribusi terhadap keputusan karyawan untuk keluar dari perusahaan meliputi rendahnya kepuasan kerja, beban kerja yang tinggi, dan buruknya keseimbangan antara kehidupan kerja dan pribadi. Selain itu, faktor sosial seperti status pernikahan juga berpengaruh, di mana proporsi karyawan lajang yang mengalami attrition jauh lebih tinggi dibandingkan kelompok lainnya.
 
-Model prediktif yang dikembangkan melalui Streamlit membantu mengidentifikasi karyawan yang berisiko tinggi resign, memungkinkan HR untuk melakukan intervensi dini.
+Dari sisi departemen, Sales dan R&D merupakan dua divisi dengan tingkat attrition tertinggi. Hal ini menunjukkan bahwa mungkin terdapat tekanan kerja atau kurangnya dukungan organisasi yang perlu ditangani secara khusus di kedua departemen tersebut.
+
+Karakteristik umum dari karyawan yang mengalami attrition antara lain:
+
+- Berusia muda (25–35 tahun)
+
+- Belum menikah
+
+- Bekerja di departemen Sales atau R&D
+
+- Memiliki jam kerja yang panjang (>50 jam per minggu), dimana disini banyak yang overtime.
+
+- Memiliki kepuasan kerja yang rendah
+
+Model prediktif yang dikembangkan dengan algoritma machine learning dan diimplementasikan melalui aplikasi Streamlit mampu mengidentifikasi karyawan dengan risiko tinggi untuk resign. Dengan adanya sistem ini, departemen HR dapat melakukan intervensi lebih dini, seperti menawarkan program kesejahteraan karyawan, penyesuaian beban kerja, atau pendekatan personal bagi karyawan yang terdeteksi berisiko.
+
+Rekomendasi utama bagi perusahaan adalah meningkatkan kualitas lingkungan kerja dan keseimbangan hidup karyawan, khususnya bagi karyawan muda dan lajang, serta melakukan evaluasi mendalam terhadap kondisi kerja di departemen dengan tingkat attrition tinggi.
 
 ## Rekomendasi Action Items
-- Meningkatkan program kesejahteraan karyawan yang fokus pada work-life balance dan lingkungan kerja yang sehat.
+Berdasarkan hasil analisis pada dashboard, berikut adalah rekomendasi tindakan yang disarankan untuk menurunkan angka attrition di perusahaan Jaya Jaya Maju:
 
-- Memberikan perhatian lebih pada departemen dengan attrition tinggi (Sales dan R&D) melalui insentif berbasis performa, pelatihan manajerial, dan evaluasi beban kerja.
+### 1. Kendalikan Jam Lembur (Overtime)
+  Grafik menunjukkan bahwa lebih dari dua kali lipat jumlah karyawan yang lembur mengalami attrition dibandingkan dengan yang tidak. Oleh karena itu:
 
-- Menyelenggarakan kegiatan sosial internal untuk meningkatkan keterikatan sosial, khususnya bagi karyawan yang belum menikah.
+  * Batasi jam kerja maksimal menjadi ≤ 45 jam/minggu, terutama pada departemen Sales dan R&D.
 
-- Menerapkan kebijakan jam kerja fleksibel dan pekerjaan jarak jauh (remote) bagi peran yang memungkinkan.
+  * Rekomendasi awal adalah mengurangi lembur hingga 30% dari kondisi saat ini, dengan memantau dampaknya dalam 3 bulan.
 
-- Menggunakan sistem prediksi berbasis machine learning untuk memantau dan merespon risiko attrition secara proaktif.
+  * Terapkan skema kompensasi lembur yang adil dan pantau work-load melalui aplikasi monitoring internal.
+
+### 2. Fokus pada Departemen Sales dan R&D
+  Pie chart menunjukkan bahwa Sales (39.9%) dan R&D (58.2%) menyumbang hampir seluruh attrition. Rekomendasi:
+  
+  * Lakukan audit beban kerja dan distribusi tugas di dua departemen ini.
+
+  * Berikan training manajemen stres dan leadership untuk supervisor/manager.
+
+  * Tawarkan jalur pengembangan karier yang lebih jelas untuk mengurangi stagnasi profesional.
+
+### 3. Optimalkan Program Kesejahteraan
+  Berdasarkan grafik Environment, Job, dan Work-Life Balance:
+
+  * Mayoritas karyawan yang keluar memberikan skor 1–2 (rendah) pada ketiga aspek ini.
+
+  * Rekomendasi: Tawarkan fleksibilitas kerja (hybrid), sesi counseling bulanan, dan cuti tambahan untuk keseimbangan hidup.
+
+### 4. Intervensi Sosial untuk Karyawan Lajang
+  Pie chart menunjukkan bahwa 52.5% dari karyawan yang keluar adalah lajang. Ini menunjukkan perlunya dukungan sosial di tempat kerja:
+  
+  * Adakan kegiatan seperti team bonding, komunitas minat, mentoring lintas divisi, atau volunteer day.
+
+  * Tawarkan sesi “HR one-on-one” untuk mendengarkan aspirasi pribadi dan meningkatkan sense of belonging.
+  
+### 5. Implementasi Sistem Prediksi Attrition
+  Aplikasi prediktif yang dibuat dapat mengenali profil karyawan berisiko tinggi berdasarkan faktor-faktor seperti:
+
+  * Status lajang, kerja lembur, skor kepuasan rendah, dan departemen kerja.
+
+  * Gunakan sistem ini secara berkala (bulanan) untuk melakukan intervensi seperti coaching, diskusi karier, atau rotasi pekerjaan.
