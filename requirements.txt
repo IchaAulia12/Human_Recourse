@@ -6,3 +6,4 @@ scikit-learn
 imbalanced-learn
 scipy
 numpy
+pickle #dari Reviewer sebelumnya ini harus dicantumkan. padahal pickle adalah modul bawaan python. jadi jika nanti anda berpendapat ini tidak harus dicantumkan anggap ini tidak ada. terimakasih.
