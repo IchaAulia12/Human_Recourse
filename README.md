@@ -69,7 +69,8 @@ Business dashboard dibuat menggunakan Looker Studio, dengan fokus utama pada ana
 
 - Dashboard ini menjadi alat bantu utama bagi tim HR untuk mengidentifikasi area yang memerlukan perhatian khusus dan mengambil tindakan preventif lebih cepat.
   
-![Screenshot 2025-05-13 085418](https://github.com/user-attachments/assets/83ce2a58-35fa-4c2a-aa43-701c0b2b7fec)
+![image](https://github.com/user-attachments/assets/6fc0206d-a4d7-4f3b-abfa-acd1e8f724ed)
+
 
 [Link Business Dashboard](https://lookerstudio.google.com/reporting/6c5a2346-bbd8-41fd-97e1-827e9939a4e9)
 ## Model Prediction
