@@ -4,7 +4,9 @@ import pandas as pd
 import pickle
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+# --- Layout ---
+st.set_page_config(page_title="Attrition Dashboard", layout="wide")
+st.title("📊 Employees Attrition Dashboard")
 # --- Load model dan data ---
 @st.cache_resource
 def load_model():
@@ -55,9 +57,6 @@ df_viz["Age Group"] = df_viz["Age"].apply(bin_age)
 df_viz["Experience Group"] = df_viz["TotalWorkingYears"].apply(bin_experience)
 df_viz["Salary Group"] = df_viz["MonthlyIncome"].apply(bin_salary)
 
-# --- Layout ---
-st.set_page_config(page_title="Attrition Dashboard", layout="wide")
-st.title("📊 Employees Attrition Dashboard")
 # --- SECTION 3: Prediksi Individual ---
 st.header("🔎 Predict Employee Attrition")
 emp_id = st.text_input("Masukkan Employee ID:")
