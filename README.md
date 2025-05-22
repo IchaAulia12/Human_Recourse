@@ -1,153 +1,79 @@
-# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Jaya Jaya Maju
+# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Edutech
+
 ## Business Understanding
-Jaya Jaya Maju merupakan perusahaan multinasional yang telah berdiri sejak tahun 2000 dan memiliki lebih dari 1000 karyawan yang tersebar di seluruh wilayah Indonesia. Meskipun telah berkembang pesat, perusahaan menghadapi tantangan signifikan dalam mengelola sumber daya manusia. Salah satu indikator yang menunjukkan adanya masalah adalah tingginya attrition rate atau tingkat keluar masuk karyawan, yang telah melebihi 10%. Hal ini dapat berdampak pada produktivitas, stabilitas tim, dan biaya rekrutmen yang meningkat.
 
-## Permasalahan Bisnis
-Beberapa permasalahan utama yang dihadapi perusahaan, berdasarkan analisis data, meliputi:
+Jaya Jaya Institut adalah institusi pendidikan tinggi yang telah berdiri sejak tahun 2000 dan dikenal dengan reputasi lulusan yang baik. Namun, dalam beberapa tahun terakhir, jumlah mahasiswa yang tidak menyelesaikan studi atau dropout semakin meningkat. Tingginya angka dropout menjadi tantangan besar karena berdampak pada citra institusi, efisiensi operasional, dan akreditasi institusi itu sendiri. Oleh karena itu, penting bagi pihak institusi untuk memahami pola dan faktor-faktor penyebab dropout, serta membangun sistem prediktif agar dapat melakukan intervensi lebih dini.
 
-- Tingginya attrition rate di departemen tertentu, khususnya Sales dan Research & Development.
+### Permasalahan Bisnis
+- Tingginya angka dropout mahasiswa dari Jaya Jaya Institut.
+- Kurangnya pemahaman tentang faktor-faktor utama yang memengaruhi dropout.
+- Tidak adanya sistem monitoring performa mahasiswa secara menyeluruh.
+- Belum adanya sistem prediksi mahasiswa yang berisiko dropout.
 
-- Rendahnya tingkat kepuasan terhadap lingkungan kerja dan keseimbangan kehidupan kerja (work-life balance) pada karyawan yang keluar.
+### Cakupan Proyek
+- Melakukan eksplorasi data (EDA) untuk memahami karakteristik mahasiswa dan hubungan antar fitur dengan status kelulusan.
+- Menganalisis berbagai faktor yang berpotensi memengaruhi dropout, seperti status pernikahan, program studi, jenis kehadiran, nilai akademik, kondisi ekonomi, beasiswa, usia, jenis kelamin, dan jumlah mata kuliah.
+- Membangun dashboard untuk monitoring performa mahasiswa secara visual.
+- Mengembangkan sistem machine learning untuk memprediksi kemungkinan dropout mahasiswa berdasarkan data historis.
 
-- Persentase tinggi karyawan lajang yang mengalami attrition, menunjukkan kemungkinan kurangnya dukungan sosial di tempat kerja.
+### Persiapan
 
-- Belum adanya sistem prediktif untuk mengantisipasi karyawan yang berisiko tinggi untuk resign.
+**Sumber data:** Dataset "students' performance" dari pihak Jaya Jaya Institut.
 
-## Cakupan Proyek
-Proyek ini mencakup:
-
-Analisis eksploratif terhadap data HR untuk mengidentifikasi pola dan faktor penyebab attrition.
-
-- Pembuatan business dashboard interaktif menggunakan Looker Studio untuk memvisualisasikan faktor-faktor utama attrition.
-
-- Pengembangan aplikasi prediktif berbasis Streamlit untuk mengklasifikasikan kemungkinan karyawan akan keluar, berdasarkan data historis.
-
-Persiapan
-
-[Sumber data](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee): Dataset internal perusahaan dengan lebih dari 1000 karyawan, berisi 35 fitur terkait karakteristik karyawan, kepuasan kerja, kompensasi, dan histori pekerjaan.
-
-Setup environment:
-
-```
-Tools yang digunakan:
-- Python (pandas, numpy, matplotlib, seaborn, scikit-learn, streamlit)
-- Looker Studio (untuk visualisasi dashboard)
-- Jupyter Notebook (untuk eksplorasi dan modelling)
-```
-## Setup menggunakan Google colab 
-```
-!pip install -r requirements.txt
-```
-## Setup Environment - Anaconda
-```
-conda create --name main-ds python=3.9
-conda activate main-ds
-pip install -r requirements.txt
-```
-## Setup dengan pipenv (alternatif)
-```
-mkdir proyek_analisis_data
-cd proyek_analisis_data
-pipenv install --python 3.9
-pipenv shell
-pip install -r requirements.txt
-```
-
-## Run steamlit app
-```
-streamlit run app.py
+**Setup environment:**
+```bash
+Python 3.10
+Jupyter Notebook
+Pandas
+Numpy
+Matplotlib
+Seaborn
+Scikit-learn
+Streamlit
+joblib
 ```
 
 ## Business Dashboard
-Business dashboard dibuat menggunakan Looker Studio, dengan fokus utama pada analisis visual terhadap faktor-faktor penyebab attrition. Beberapa visualisasi yang ditampilkan antara lain:
 
-- Distribusi attrition berdasarkan status pernikahan, departemen, dan bidang pendidikan.
+Dashboard yang dibangun menyajikan visualisasi interaktif terkait performa mahasiswa, faktor-faktor yang berkontribusi terhadap dropout, dan status akhir mahasiswa berdasarkan berbagai kategori seperti program studi, jenis kehadiran, beasiswa, dan lainnya. Dashboard ini membantu manajemen dalam mengambil keputusan strategis berbasis data.
 
-- Perbandingan tingkat kepuasan kerja (Job Satisfaction), lingkungan kerja (Environment Satisfaction), dan keseimbangan kerja-hidup (Work Life Balance) antara karyawan yang bertahan dan yang keluar.
+🔗 **Link Dashboard:** (Akan disediakan setelah deploy)
 
-- Grafik attrition berdasarkan OverTime, yang menunjukkan dampak beban kerja terhadap keputusan resign.
+## Menjalankan Sistem Machine Learning
 
-- Dashboard ini menjadi alat bantu utama bagi tim HR untuk mengidentifikasi area yang memerlukan perhatian khusus dan mengambil tindakan preventif lebih cepat.
-  
-![image](https://github.com/user-attachments/assets/6fc0206d-a4d7-4f3b-abfa-acd1e8f724ed)
+Sistem machine learning yang dikembangkan dapat memprediksi kemungkinan seorang mahasiswa akan dropout atau lulus berdasarkan fitur-fitur akademik dan demografis.
 
+```bash
+Langkah-langkah menjalankan prototipe:
+1. Jalankan script Streamlit dengan perintah:
+   $ streamlit run app.py
+2. Masukkan data mahasiswa melalui form input.
+3. Model akan menampilkan hasil prediksi status mahasiswa.
+4. Backend model diload dari file pickle/joblib hasil training.
+```
 
-[Link Business Dashboard](https://lookerstudio.google.com/reporting/6c5a2346-bbd8-41fd-97e1-827e9939a4e9)
-## Model Prediction
-
-- Dalam Prediksi ini. HR hanya perlu memasukkan ID dari pekerja, kemudian disini akan memperlihatkan presentase prediksi apakah memiliki kemungkinan keluar tinggi atau tidak.
-![Screenshot 2025-05-13 081946](https://github.com/user-attachments/assets/0451977e-2fd7-43a2-8168-c596ca211ef6)
-
-- ini adalah contoh jika prediksi mendapati bahwa Employee dengan ID 12 memiliki kemungkinan keluar yang tinggi.
-![Screenshot 2025-05-13 082042](https://github.com/user-attachments/assets/20e899d7-585e-43a0-b18b-70db4d85765f)
-
-- Pada Halaman ini juga terdapat Dashboard untuk HR mempertimbangkan prediksi dan juga Employee bagaimana untuk mempertahankan dan menciptakan ruang kerja yang lebih baik.
-![Screenshot 2025-05-13 082131](https://github.com/user-attachments/assets/b2a19572-b9cc-423c-ae3b-162b79675285)
-![Screenshot 2025-05-13 082138](https://github.com/user-attachments/assets/083a679a-edd3-41f6-a027-0b1d157fda16)
-![Screenshot 2025-05-13 082148](https://github.com/user-attachments/assets/02e92c06-abfb-403c-a64e-f1201fe2acdb)
-
-
-[Link Streamlit](https://humanrecourse-2cglzs2f3lvwggixfsusrn.streamlit.app/)
+🔗 **Link Prototype:** (Akan disediakan setelah deploy)
 
 ## Conclusion
-Hasil analisis menunjukkan bahwa attrition di perusahaan Jaya Jaya Maju dipengaruhi oleh kombinasi faktor internal dan sosial. Beberapa faktor utama yang berkontribusi terhadap keputusan karyawan untuk keluar dari perusahaan meliputi rendahnya kepuasan kerja, beban kerja yang tinggi, dan buruknya keseimbangan antara kehidupan kerja dan pribadi. Selain itu, faktor sosial seperti status pernikahan juga berpengaruh, di mana proporsi karyawan lajang yang mengalami attrition jauh lebih tinggi dibandingkan kelompok lainnya.
 
-Dari sisi departemen, Sales dan R&D merupakan dua divisi dengan tingkat attrition tertinggi. Hal ini menunjukkan bahwa mungkin terdapat tekanan kerja atau kurangnya dukungan organisasi yang perlu ditangani secara khusus di kedua departemen tersebut.
+Proyek ini berhasil mengidentifikasi sejumlah faktor utama yang berkontribusi terhadap kemungkinan dropout mahasiswa. Model prediksi yang dibangun memiliki potensi untuk digunakan sebagai sistem pendukung keputusan dalam proses bimbingan mahasiswa berisiko tinggi. Selain itu, dashboard interaktif memungkinkan pihak manajemen untuk memantau performa mahasiswa secara lebih efektif.
 
-Karakteristik umum dari karyawan yang mengalami attrition antara lain:
+### Rekomendasi Action Items
 
-- Berusia muda (25–35 tahun)
+1. **Penerapan sistem prediksi dropout berbasis data**  
+   Jaya Jaya Institut perlu mengintegrasikan sistem prediksi ini ke dalam sistem akademik mereka. Prosesnya bisa berupa evaluasi rutin setiap awal semester dengan data mahasiswa terbaru, dan hasilnya akan digunakan untuk menandai mahasiswa dengan potensi dropout tinggi.
 
-- Belum menikah
+2. **Pembentukan tim intervensi akademik dan psikologis**  
+   Mahasiswa yang masuk dalam kategori risiko tinggi dari hasil prediksi perlu segera dihubungi oleh tim khusus yang terdiri dari dosen wali, konselor akademik, dan psikolog. Tim ini akan bertugas memberikan pendampingan personal dan strategi belajar yang lebih terarah.
 
-- Bekerja di departemen Sales atau R&D
+3. **Evaluasi kurikulum dan beban studi pada program studi bermasalah**  
+   Program seperti Basic Education dan Equinculture yang memiliki angka dropout tinggi perlu dilakukan evaluasi. Ini bisa mencakup survei kepuasan mahasiswa, kesulitan kurikulum, atau ketersediaan fasilitas pendukung. Jika perlu, dilakukan penyusunan ulang silabus agar lebih proporsional.
 
-- Memiliki jam kerja yang panjang (>50 jam per minggu), dimana disini banyak yang overtime.
+4. **Optimalisasi jadwal kelas malam dan pembelajaran fleksibel**  
+   Mahasiswa kelas malam menunjukkan dropout lebih tinggi. Institusi dapat mempertimbangkan implementasi blended learning atau menyediakan kelas tambahan di akhir pekan untuk meringankan beban belajar sambil bekerja.
 
-- Memiliki kepuasan kerja yang rendah
+5. **Monitoring performa beasiswa secara berkala**  
+   Untuk memastikan efektivitas program beasiswa, perlu ada pelaporan rutin dari penerima beasiswa terkait capaian akademik mereka. Mahasiswa yang mendapatkan beasiswa namun menunjukkan performa buruk dapat diberikan bimbingan intensif agar tidak mengalami dropout.
 
-Model prediktif yang dikembangkan dengan algoritma machine learning dan diimplementasikan melalui aplikasi Streamlit mampu mengidentifikasi karyawan dengan risiko tinggi untuk resign. Dengan adanya sistem ini, departemen HR dapat melakukan intervensi lebih dini, seperti menawarkan program kesejahteraan karyawan, penyesuaian beban kerja, atau pendekatan personal bagi karyawan yang terdeteksi berisiko.
-
-Rekomendasi utama bagi perusahaan adalah meningkatkan kualitas lingkungan kerja dan keseimbangan hidup karyawan, khususnya bagi karyawan muda dan lajang, serta melakukan evaluasi mendalam terhadap kondisi kerja di departemen dengan tingkat attrition tinggi.
-
-## Rekomendasi Action Items
-Berdasarkan hasil analisis pada dashboard, berikut adalah rekomendasi tindakan yang disarankan untuk menurunkan angka attrition di perusahaan Jaya Jaya Maju:
-
-### 1. Kendalikan Jam Lembur (Overtime)
-  Grafik menunjukkan bahwa lebih dari dua kali lipat jumlah karyawan yang lembur mengalami attrition dibandingkan dengan yang tidak. Oleh karena itu:
-
-  * Batasi jam kerja maksimal menjadi ≤ 45 jam/minggu, terutama pada departemen Sales dan R&D.
-
-  * Rekomendasi awal adalah mengurangi lembur hingga 30% dari kondisi saat ini, dengan memantau dampaknya dalam 3 bulan.
-
-  * Terapkan skema kompensasi lembur yang adil dan pantau work-load melalui aplikasi monitoring internal.
-
-### 2. Fokus pada Departemen Sales dan R&D
-  Pie chart menunjukkan bahwa Sales (39.9%) dan R&D (58.2%) menyumbang hampir seluruh attrition. Rekomendasi:
-  
-  * Lakukan audit beban kerja dan distribusi tugas di dua departemen ini.
-
-  * Berikan training manajemen stres dan leadership untuk supervisor/manager.
-
-  * Tawarkan jalur pengembangan karier yang lebih jelas untuk mengurangi stagnasi profesional.
-
-### 3. Optimalkan Program Kesejahteraan
-  Berdasarkan grafik Environment, Job, dan Work-Life Balance:
-
-  * Mayoritas karyawan yang keluar memberikan skor 1–2 (rendah) pada ketiga aspek ini.
-
-  * Rekomendasi: Tawarkan fleksibilitas kerja (hybrid), sesi counseling bulanan, dan cuti tambahan untuk keseimbangan hidup.
-
-### 4. Intervensi Sosial untuk Karyawan Lajang
-  Pie chart menunjukkan bahwa 52.5% dari karyawan yang keluar adalah lajang. Ini menunjukkan perlunya dukungan sosial di tempat kerja:
-  
-  * Adakan kegiatan seperti team bonding, komunitas minat, mentoring lintas divisi, atau volunteer day.
-
-  * Tawarkan sesi “HR one-on-one” untuk mendengarkan aspirasi pribadi dan meningkatkan sense of belonging.
-  
-### 5. Implementasi Sistem Prediksi Attrition
-  Aplikasi prediktif yang dibuat dapat mengenali profil karyawan berisiko tinggi berdasarkan faktor-faktor seperti:
-
-  * Status lajang, kerja lembur, skor kepuasan rendah, dan departemen kerja.
-
-  * Gunakan sistem ini secara berkala (bulanan) untuk melakukan intervensi seperti coaching, diskusi karier, atau rotasi pekerjaan.
+6. **Penyusunan modul pembelajaran tambahan bagi mahasiswa tahun pertama**  
+   Karena nilai akademik di semester 1 dan 2 sangat berpengaruh terhadap kelulusan, maka Jaya Jaya Institut bisa menyediakan modul bimbingan belajar atau remedial learning online sebagai bentuk intervensi awal untuk mahasiswa baru.
